@@ -1,7 +1,9 @@
 # thing-a-day
 A web API to provide periodic random selections of data for websites, tweets, etc. 
 
-I've been meaning to do this for ever and ever, but never do. Hopefully I'll get it done.
+I've been meaning to do this for ever and ever, but never have, so far. Hopefully I'll get it done soon.
+It's funny how you can mean to do something fairly simple, and never get around to it, and then one
+day you just go "what the heck?" and you do it.
 
 The idea is that lots of people (not just me) want to make a semi-static site, or one
 that has static elements that change periodically. The best way to describe it may be
