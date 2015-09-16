@@ -1,4 +1,9 @@
 [ ] start a project in scala / play
-[ ] define the APIs
-[ ] add authorization and authentication (via API keys?)
 [ ] define a simple schema
+[ ] define the APIs
+  [ ] add a category of items
+    [ ] add an item
+    [ ] update an item
+    [ ] delete an item
+  [ ] get N items from a category
+[ ] add authorization and authentication (via API keys?)
