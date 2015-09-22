@@ -5,5 +5,10 @@
     [ ] add an item
     [ ] update an item
     [ ] delete an item
-  [ ] get N items from a category
+  [ ] set a tag name for a category
+    [ ] give it a time range (e.g. once a day, starting at time X UTC)
+    [ ] say how many items from the category to choose
+  [ ] get items from a category based on a tag
+    [ ] if no items cached within the time range (e.g. the last day) generate new ones
 [ ] add authorization and authentication (via API keys?)
+[ ] set up a batch job to generate items for tags
