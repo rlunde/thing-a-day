@@ -1,5 +1,6 @@
 [ ] start a project in scala / play
 [ ] define a simple schema
+  [ ] decide on a default database (postgres?)
 [ ] define the APIs
   [ ] add a category of items
     [ ] add an item
@@ -12,3 +13,6 @@
     [ ] if no items cached within the time range (e.g. the last day) generate new ones
 [ ] add authorization and authentication (via API keys?)
 [ ] set up a batch job to generate items for tags
+[ ] should item contents be able to reference another item?
+  [ ] think about designing a DSL so item contents are templates that can be filled out
+  [ ] refer to the same category:item (e.g. "fruit:1" might refer back to "apple")
