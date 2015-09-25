@@ -6,6 +6,7 @@
     [ ] add an item
     [ ] update an item
     [ ] delete an item
+    [ ] list items (paged)
   [ ] set a tag name for a category
     [ ] give it a time range (e.g. once a day, starting at time X UTC)
     [ ] say how many items from the category to choose
