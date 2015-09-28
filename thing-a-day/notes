@@ -1,0 +1,12 @@
+
+1) Import and Export format
+
+Try using JSON like:
+
+{"category-name":[
+  {"id":"guid", "value":"some content"},
+  {"value":"some other content"}
+]}
+
+If the id is set, an import should do an upsert, otherwise an insert.
+
