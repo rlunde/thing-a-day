@@ -1,4 +1,10 @@
 [ ] start a project in scala / play
+[ ] write instructions for how to install
+  [ ] getting the right version of dependencies
+  [ ] building it
+[ ] write instructions for how to test
+[ ] write instructions for how to run
+[ ] write deployment instructions
 [ ] define a simple schema
   [ ] decide on a default database (postgres?)
 [ ] define the APIs
