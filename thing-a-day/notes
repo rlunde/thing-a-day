@@ -10,3 +10,10 @@ Try using JSON like:
 
 If the id is set, an import should do an upsert, otherwise an insert.
 
+2) Should provide for scheduled generation of periodic content
+
+For example, have a tag name that refers to a category, that says to
+generate 12 unique new items from a named category, once a day at 11:55pm.
+
+That way, the API doesn't have to generate new content, just get the
+cached content, which should be fast and efficient.
