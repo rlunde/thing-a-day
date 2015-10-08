@@ -42,5 +42,4 @@ So:
 
 This project is open source software.
 
-This project is based on Activator and the Play framework, which means it is licensed under the Apache 2 license.
-See the LICENSE file for a link to the text of that license.
+See the LICENSE file for a link to the text of the license.
