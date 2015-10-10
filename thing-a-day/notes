@@ -17,3 +17,12 @@ generate 12 unique new items from a named category, once a day at 11:55pm.
 
 That way, the API doesn't have to generate new content, just get the
 cached content, which should be fast and efficient.
+
+-----------
+
+To get started:
+go get github.com/revel/revel
+go get github.com/mattn/go-sqlite3
+
+I'm having second thoughts on using revel, after having tried the samples. 
+I wonder if this project really needs all the overhead?
