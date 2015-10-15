@@ -1,0 +1,2 @@
+# source this file, don't execute it
+export GOPATH=$GOPATH:$(pwd)

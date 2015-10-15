@@ -26,3 +26,16 @@ go get github.com/mattn/go-sqlite3
 
 I'm having second thoughts on using revel, after having tried the samples. 
 I wonder if this project really needs all the overhead?
+
+To do this, follow the instructions to install revel and revel/cmd here:
+https://revel.github.io/tutorial/gettingstarted.html
+
+There's a "source-me" file two directories up that should set up GOPATH to
+include this directory. Run it like:
+
+source source-me 
+
+(Assuming you use bash, of course.)
+
+Then you can try "revel run thing-a-day"
+
