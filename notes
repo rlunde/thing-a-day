@@ -1,0 +1,7 @@
+
+I'm trying to make the structure of this project map a little more closely to the standard
+structure of a go workspace. See:
+
+https://golang.org/doc/code.html
+
+
