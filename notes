@@ -4,4 +4,15 @@ structure of a go workspace. See:
 
 https://golang.org/doc/code.html
 
+To install the things needed for revel, look here:
+
+https://revel.github.io/tutorial/gettingstarted.html
+
+Make sure you have git and mercurial installed, as well as golang, before continuing.
+
+After you clone this repo, you will want to run the "source-me" file to set your
+$GOPATH to this directory, then run:
+
+go get github.com/revel/revel
+go get github.com/revel/cmd/revel
 
