@@ -39,3 +39,41 @@ source source-me
 
 Then you can try "revel run thing-a-day"
 
+I think I'll try to get this running on Heroku first. Fortunately, there
+are some instructions for how to do that here:
+
+https://revel.github.io/manual/deployment.html
+
+Looks like I'll also need a heroku buildpack for that:
+
+https://github.com/revel/heroku-buildpack-go-revel
+
+Also, switching to Postgres in order to run on Heroku means figuring out
+configuration for deployment vs development. There is a (small) description
+for setting up a database for Revel here:
+
+https://revel.github.io/manual/database.html
+
+To set it up for heroku I did:
+
+$ cd thing-a-day/src/github.com/rlunde/thing-a-day
+$ echo "github.com/rlunde/thing-a-day" > .godir
+$ heroku create -b https://github.com/revel/heroku-buildpack-go-revel.git
+The output of that was:
+
+Creating spooky-coffin-6997... done, stack is cedar-14
+Buildpack set. Next release on spooky-coffin-6997 will use https://github.com/revel/heroku-buildpack-go-revel.git.
+https://spooky-coffin-6997.herokuapp.com/ | https://git.heroku.com/spooky-coffin-6997.git
+Git remote heroku added
+
+Since I did this on Halloween, I was very impressed that Heroku picked "spooky-coffin". Also, github's
+contribution grid for today has switched from shades of green to shades of orange and black!
+
+Looks like I should have followed these instructions on Heroku instead?
+https://devcenter.heroku.com/articles/getting-started-with-go#introduction
+https://devcenter.heroku.com/articles/go-support
+
+Note: the "go get github.com/heroku/go-getting-started/..." is there to create a tutorial project,
+so I didn't do it here.
+
+
