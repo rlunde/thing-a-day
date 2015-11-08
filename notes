@@ -16,3 +16,6 @@ $GOPATH to this directory, then run:
 go get github.com/revel/revel
 go get github.com/revel/cmd/revel
 
+To run it, execute the "run-it" bash script, or do what it does (after sourcing source-me):
+revel run github.com/rlunde/thing-a-day
+
