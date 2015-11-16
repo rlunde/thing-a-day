@@ -19,3 +19,8 @@ go get github.com/revel/cmd/revel
 To run it, execute the "run-it" bash script, or do what it does (after sourcing source-me):
 revel run github.com/rlunde/thing-a-day
 
+The next thing to do, as I found out from another project, is to make sure I get
+it running on heroku, if that's where I'm planning to do it (or whereever else). Sometimes
+the project structure has to change to fit the environment, and I'd rather do that
+before things get complicated.
+
