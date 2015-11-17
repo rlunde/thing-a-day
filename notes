@@ -24,3 +24,6 @@ it running on heroku, if that's where I'm planning to do it (or whereever else).
 the project structure has to change to fit the environment, and I'd rather do that
 before things get complicated.
 
+I've got another project, humorscope, that I plan to use this with to test it. So
+far, just getting the time to look at it has been an issue.
+
