@@ -3,6 +3,7 @@
   [ ] building it
 [ ] write instructions for how to test
 [ ] write deployment instructions
+  [ ] start with heroku?
 [ ] define a simple schema
   [ ] decide on a default database (postgres?)
 [ ] define the APIs
