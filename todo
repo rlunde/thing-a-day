@@ -1,3 +1,6 @@
+[ ] figure out how to hook up postgres
+  [ ] looks like GORM should be a good way (https://github.com/jinzhu/gorm)
+[ ] figure out how to deploy (including postgres) to heroku
 [ ] write instructions for how to install
   [ ] getting the right version of dependencies
   [ ] building it

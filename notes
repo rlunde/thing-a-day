@@ -27,3 +27,23 @@ before things get complicated.
 I've got another project, humorscope, that I plan to use this with to test it. So
 far, just getting the time to look at it has been an issue.
 
+I'm going to see if I can use GORM with it: https://github.com/jinzhu/gorm
+I installed it via:
+
+go get -u github.com/jinzhu/gorm
+
+The postgresql driver appears to be pq:
+
+go get -u -v github.com/lib/pq
+
+Then I used postgres command line tools and created a user and database named "tad" (for thing-a-day):
+createuser -d -e -r tad
+createdb -e -U tad tad
+
+Then in psql:
+psql (9.4.5)
+# grant all privileges on database tad to tad;
+\q
+
+
+

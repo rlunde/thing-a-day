@@ -7,6 +7,9 @@ src/gopkg.in
 src/github.com/agtorre
 src/github.com/revel
 src/github.com/robfig
+src/github.com/jinzhu
+src/github.com/lib
+src/github.com/qor
 pkg/
 bin/
 
