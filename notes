@@ -45,5 +45,8 @@ psql (9.4.5)
 # grant all privileges on database tad to tad;
 \q
 
+Finally! The stupid NaNoWriMo month is over, and I can actually try to do something for real in github.
 
+I'm not sure it's really a good idea to spend so much time trying to get things working in heroku? I don't
+know how helpful that's really going to be to anyone else.
 
