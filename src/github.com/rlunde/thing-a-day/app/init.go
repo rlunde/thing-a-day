@@ -1,6 +1,11 @@
 package app
 
-import "github.com/revel/revel"
+import (
+	"database/sql"
+	"fmt"
+	_ "github.com/lib/pq"
+	"github.com/revel/revel"
+)
 
 func init() {
 	// Filters is the default set of global filters.
@@ -21,7 +26,7 @@ func init() {
 
 	// register startup functions with OnAppStart
 	// ( order dependent )
-	// revel.OnAppStart(InitDB)
+	revel.OnAppStart(InitDB)
 	// revel.OnAppStart(FillCache)
 }
 
@@ -35,4 +40,17 @@ var HeaderFilter = func(c *revel.Controller, fc []revel.Filter) {
 	c.Response.Out.Header().Add("X-Content-Type-Options", "nosniff")
 
 	fc[0](c, fc[1:]) // Execute the next filter stage.
+}
+
+var DB *sql.DB
+
+func InitDB() {
+	connstring := fmt.Sprintf("user=%s password='%s' dbname=%s sslmode=disable", "tad", "", "tad")
+
+	var err error
+	DB, err = sql.Open("postgres", connstring)
+	if err != nil {
+		revel.INFO.Println("DB Error", err)
+	}
+	revel.INFO.Println("DB Connected")
 }
