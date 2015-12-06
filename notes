@@ -50,3 +50,7 @@ Finally! The stupid NaNoWriMo month is over, and I can actually try to do someth
 I'm not sure it's really a good idea to spend so much time trying to get things working in heroku? I don't
 know how helpful that's really going to be to anyone else.
 
+I added an InitDB function that connects to the database using regular sql, rather than GORM, as
+a starting point. I'm not sure I should actually tackle GORM right away, since the database use
+is going to be very trivial, as far as I can tell.
+
