@@ -1,2 +1,2 @@
 #!/bin/bash
-revel run github.com/rlunde/thing-a-day
+github.com/rlunde/thing-a-day
