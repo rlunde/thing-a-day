@@ -21,14 +21,6 @@ cached content, which should be fast and efficient.
 -----------
 
 To get started:
-go get github.com/revel/revel
-go get github.com/mattn/go-sqlite3
-
-I'm having second thoughts on using revel, after having tried the samples. 
-I wonder if this project really needs all the overhead?
-
-To do this, follow the instructions to install revel and revel/cmd here:
-https://revel.github.io/tutorial/gettingstarted.html
 
 There's a "source-me" file two directories up that should set up GOPATH to
 include this directory. Run it like:
@@ -36,8 +28,6 @@ include this directory. Run it like:
 source source-me 
 
 (Assuming you use bash, of course.)
-
-Then you can try "revel run thing-a-day"
 
 I think I'll try to get this running on Heroku first. Fortunately, there
 are some instructions for how to do that here:
@@ -47,12 +37,6 @@ https://revel.github.io/manual/deployment.html
 Looks like I'll also need a heroku buildpack for that:
 
 https://github.com/revel/heroku-buildpack-go-revel
-
-Also, switching to Postgres in order to run on Heroku means figuring out
-configuration for deployment vs development. There is a (small) description
-for setting up a database for Revel here:
-
-https://revel.github.io/manual/database.html
 
 To set it up for heroku I did:
 
@@ -76,4 +60,8 @@ https://devcenter.heroku.com/articles/go-support
 Note: the "go get github.com/heroku/go-getting-started/..." is there to create a tutorial project,
 so I didn't do it here.
 
+NOTE: I started this project using revel, but have decided to switch to gorilla since it's much
+simpler, and start with this example so I can use JWT for auth:
+
+https://github.com/brainattica/golang-jwt-authentication-api-sample
 

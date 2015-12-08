@@ -54,3 +54,7 @@ I added an InitDB function that connects to the database using regular sql, rath
 a starting point. I'm not sure I should actually tackle GORM right away, since the database use
 is going to be very trivial, as far as I can tell.
 
+I think I need to take a step back and use either regular net/httpd or gorilla for this, rather
+than revel. Revel does a lot of stuff that I just don't want to need for this -- want to keep it
+as simple as possible.
+
