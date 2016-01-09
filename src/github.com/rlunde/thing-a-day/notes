@@ -65,3 +65,26 @@ simpler, and start with this example so I can use JWT for auth:
 
 https://github.com/brainattica/golang-jwt-authentication-api-sample
 
+To open the app on heroku, go to the directory above src (with the source_me file in it) and do: heroku open
+
+I'm trying to add a database now...
+
+I did:
+heroku addons:create heroku-postgresql:hobby-dev
+
+That created an environment variable named DATABASE_URL that is visible with "heroku config"
+The "heroku pg" command shows more about the database.
+
+I got a few more things:
+$ go get -u github.com/lib/pq
+$ go get github.com/codegangsta/negroni
+$ go get github.com/heroku/go-getting-started/Godeps/_workspace/src/github.com/gin-gonic/gin
+$ go get github.com/russross/blackfriday
+
+I'm still missing some auth stuff. There's a page here that looks worth reading:
+http://thenewstack.io/make-a-restful-json-api-go/
+
+I think I skipped too far ahead and created the database. I backed up and am up to "create a procfile" now:
+https://devcenter.heroku.com/articles/getting-started-with-go#define-a-procfile
+
+
