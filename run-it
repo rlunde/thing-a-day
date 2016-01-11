@@ -1,2 +1,2 @@
 #!/bin/bash
-github.com/rlunde/thing-a-day
+./src/github.com/rlunde/thing-a-day/thing-a-day

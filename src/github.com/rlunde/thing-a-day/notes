@@ -87,4 +87,28 @@ http://thenewstack.io/make-a-restful-json-api-go/
 I think I skipped too far ahead and created the database. I backed up and am up to "create a procfile" now:
 https://devcenter.heroku.com/articles/getting-started-with-go#define-a-procfile
 
+That https://github.com/brainattica/golang-jwt-authentication-api-sample example has issues, since I can't find some of the 
+dependencies. I edited these out for now:
+
+// "api.jwt.auth/routers"
+// "api.jwt.auth/settings"
+
+I think I need to take a step back, and just do the heroku sample, except when I do heroku create, do it like the
+solution says here:
+
+http://stackoverflow.com/questions/16642753/cannot-deploy-sample-golang-application-to-heroku
+
+Then, if/when I get that working on heroku, I will try to convert it over to a gorilla project.
+
+So start over with this:
+https://devcenter.heroku.com/articles/getting-started-with-go#introduction
+
+Then convert it with something like this:
+https://www.socketloop.com/tutorials/golang-gorilla-mux-routing-example
+
+OK, got files copied, and can run locally from this directory, via:
+go build cmd/thing-a-day/main.go
+export PORT=5000
+./main
+
 
