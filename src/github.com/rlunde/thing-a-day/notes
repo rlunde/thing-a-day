@@ -111,4 +111,6 @@ go build cmd/thing-a-day/main.go
 export PORT=5000
 ./main
 
+I need to figure out how most people build go packages / products, and see if I can do that
+the same way.
 
