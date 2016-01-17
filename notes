@@ -58,3 +58,6 @@ I think I need to take a step back and use either regular net/httpd or gorilla f
 than revel. Revel does a lot of stuff that I just don't want to need for this -- want to keep it
 as simple as possible.
 
+There's another notes file down under src/github.com/rlunde/thing-a-day where I've been putting things
+lately -- I'll consolidate these when I get closer to having something interesting to show.
+
