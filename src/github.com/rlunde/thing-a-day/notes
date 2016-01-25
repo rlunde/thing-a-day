@@ -120,3 +120,58 @@ so that it gets built and tested every day. That way people can get past all the
 of just getting started, without running into bit rot that means they spend hours following
 a tutorial and then it just doesn't work, and you can't figure out why. Sheesh.
 
+Right now, this opens the sample app, but I think it will break as soon as I push the current files to heroku:
+
+heroku open --app spooky-coffin-6997
+
+Yep, this is what happens when I try to push:
+
+git push heroku master
+Counting objects: 300, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (255/255), done.
+Writing objects: 100% (300/300), 1.15 MiB | 1.46 MiB/s, done.
+Total 300 (delta 68), reused 3 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Fetching set buildpack https://github.com/revel/heroku-buildpack-go-revel.git... done
+remote:
+remote:  !     Push rejected, failed to detect set buildpack https://github.com/revel/heroku-buildpack-go-revel.git
+remote: More info: https://devcenter.heroku.com/articles/buildpacks#detection-failure
+remote:
+remote: Verifying deploy....
+remote:
+remote: !   Push rejected to spooky-coffin-6997.
+remote:
+To https://git.heroku.com/spooky-coffin-6997.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+ error: failed to push some refs to 'https://git.heroku.com/spooky-coffin-6997.git'
+
+I tried clearing buildpacks and pushing again, and now it says I'm missing Godeps (which I am, since they're down a few levels):
+
+Rons-MBP:thing-a-day ron$ heroku buildpacks:clear
+Buildpacks cleared. Next release on spooky-coffin-6997 will detect buildpack normally.
+Rons-MBP:thing-a-day ron$ git push heroku master
+Counting objects: 300, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (255/255), done.
+Writing objects: 100% (300/300), 1.15 MiB | 1005.00 KiB/s, done.
+Total 300 (delta 68), reused 3 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Go app detected
+remote:  !     Godeps are required. For instructions:
+remote:  !     https://devcenter.heroku.com/articles/go-support
+remote:
+remote:  !     Push rejected, failed to compile Go app
+remote:
+remote: Verifying deploy...
+remote:
+remote: !   Push rejected to spooky-coffin-6997.
+remote:
+To https://git.heroku.com/spooky-coffin-6997.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+ error: failed to push some refs to 'https://git.heroku.com/spooky-coffin-6997.git'
+
