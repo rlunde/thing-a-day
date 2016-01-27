@@ -175,3 +175,5 @@ To https://git.heroku.com/spooky-coffin-6997.git
  ! [remote rejected] master -> master (pre-receive hook declined)
  error: failed to push some refs to 'https://git.heroku.com/spooky-coffin-6997.git'
 
+Maybe the thing to do is to back out everything, start with the weird heroku sample that uses all those
+strange modules, and gradually morph it into something I want?
