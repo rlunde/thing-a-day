@@ -177,3 +177,11 @@ To https://git.heroku.com/spooky-coffin-6997.git
 
 Maybe the thing to do is to back out everything, start with the weird heroku sample that uses all those
 strange modules, and gradually morph it into something I want?
+
+Actually, I need to back up all the way. I want to have:
+a) a working web site that people can use and enjoy
+b) a complete sample of code that people can use to make their own stuff
+c) something that doesn't tie people in to any particular company (e.g. heroku)
+
+I need to find the simplest thing that can work across hosting companies.
+
