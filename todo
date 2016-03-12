@@ -1,11 +1,9 @@
 [ ] figure out how to hook up postgres
-[ ] figure out how to deploy (including postgres) to heroku
 [ ] write instructions for how to install
   [ ] getting the right version of dependencies
   [ ] building it
 [ ] write instructions for how to test
 [ ] write deployment instructions
-  [ ] start with heroku?
 [ ] define a simple schema
   [ ] decide on a default database (postgres?)
 [ ] define the APIs
