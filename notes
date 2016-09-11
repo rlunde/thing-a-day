@@ -1,63 +1,54 @@
 
-I'm trying to make the structure of this project map a little more closely to the standard
-structure of a go workspace. See:
+1) Import and Export format
 
-https://golang.org/doc/code.html
+Try using JSON like:
 
-To install the things needed for revel, look here:
+{"category-name":[
+  {"id":"guid", "value":"some content"},
+  {"value":"some other content"}
+]}
 
-https://revel.github.io/tutorial/gettingstarted.html
+If the id is set, an import should do an upsert, otherwise an insert.
 
-Make sure you have git and mercurial installed, as well as golang, before continuing.
+2) Should provide for scheduled generation of periodic content
 
-After you clone this repo, you will want to run the "source-me" file to set your
-$GOPATH to this directory, then run:
+For example, have a tag name that refers to a category, that says to
+generate 12 unique new items from a named category, once a day at 11:55pm.
 
-go get github.com/revel/revel
-go get github.com/revel/cmd/revel
+That way, the API doesn't have to generate new content, just get the
+cached content, which should be fast and efficient.
 
-To run it, execute the "run-it" bash script, or do what it does (after sourcing source-me):
-revel run github.com/rlunde/thing-a-day
+-----------
 
-The next thing to do, as I found out from another project, is to make sure I get
-it running on heroku, if that's where I'm planning to do it (or whereever else). Sometimes
-the project structure has to change to fit the environment, and I'd rather do that
-before things get complicated.
+To get started:
 
-I've got another project, humorscope, that I plan to use this with to test it. So
-far, just getting the time to look at it has been an issue.
+There's a "source-me" file two directories up that should set up GOPATH to
+include this directory. Run it like:
 
-I'm going to see if I can use GORM with it: https://github.com/jinzhu/gorm
-I installed it via:
+source source-me 
 
-go get -u github.com/jinzhu/gorm
+(Assuming you use bash, of course.)
 
-The postgresql driver appears to be pq:
+I thought about getting this running on Heroku first, but it turned out that
+there was a LOT of things needed for that which won't be needed in general.
 
-go get -u -v github.com/lib/pq
+I'm not planning on backing up and starting with this example, which uses Gorilla:
+https://github.com/sogko/slumber
 
-Then I used postgres command line tools and created a user and database named "tad" (for thing-a-day):
-createuser -d -e -r tad
-createdb -e -U tad tad
+I need to back up all the way. I want to have:
+a) a working web site that people can use and enjoy
+b) a complete sample of code that people can use to make their own stuff
+c) something that doesn't tie people in to any particular company (e.g. heroku)
 
-Then in psql:
-psql (9.4.5)
-# grant all privileges on database tad to tad;
-\q
+I need to find the simplest thing that can work across hosting companies.
 
-Finally! The stupid NaNoWriMo month is over, and I can actually try to do something for real in github.
+-----------
+I started moving things around, but haven't fixed anything yet. It's absurd to
+imagine that under a directory named github.com/yourname/yourproject that you'd
+have a directory structure that starts with github.com/yourname/yourproject, even
+though the default go build configuration seems to expect that sort of thing.
+Basically, they expect you to put your build configuration somewhere else besides
+your github repository, which just seems silly to me. So I'm just moving everything
+to the top of my repo, at least for now.
 
-I'm not sure it's really a good idea to spend so much time trying to get things working in heroku? I don't
-know how helpful that's really going to be to anyone else.
-
-I added an InitDB function that connects to the database using regular sql, rather than GORM, as
-a starting point. I'm not sure I should actually tackle GORM right away, since the database use
-is going to be very trivial, as far as I can tell.
-
-I think I need to take a step back and use either regular net/httpd or gorilla for this, rather
-than revel. Revel does a lot of stuff that I just don't want to need for this -- want to keep it
-as simple as possible.
-
-There's another notes file down under src/github.com/rlunde/thing-a-day where I've been putting things
-lately -- I'll consolidate these when I get closer to having something interesting to show.
 

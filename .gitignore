@@ -4,18 +4,37 @@ test-results/
 revel/revel
 src/golang.org
 src/gopkg.in
-src/github.com/agtorre
-src/github.com/revel
-src/github.com/robfig
-src/github.com/jinzhu
-src/github.com/lib
-src/github.com/qor
-src/github.com/codegangsta/
-src/github.com/heroku/
-src/github.com/russross/
-src/github.com/shurcooL/
+src/github.com
 pkg/
 bin/
 
 # editor
 *.swp
+
+### Go ###
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# Folders
+_obj
+_test
+tmp/
+
+# Architecture specific extensions/prefixes
+*.[568vq]
+[568vq].out
+
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+
+_testmain.go
+
+*.exe
+*.test
+*.prof
+.vagrant
