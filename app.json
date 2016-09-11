@@ -6,7 +6,7 @@
     "go",
   ],
   "image": "rlunde/go:1.5",
-  "mount_dir": "src/github.com/rlunde/thing-a-day",
+  "mount_dir": ".",
   "website": "http://github.com/rlunde/thing-a-day",
   "repository": "http://github.com/rlunde/thing-a-day"
 }
