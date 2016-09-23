@@ -1,1 +1,11 @@
-technologies to learn and use - go / angular
+technologies to learn and use - go / ember
+
+Initially I planned to use scala for this, and I may still,
+someday, as an alternate / additional approach. 
+
+I thought about using angular 1.5 for this, since I'm really
+enjoying a coursera class about it, but I just can't see
+ever using angular 2, and it seems the world is heading there.
+If angular 2 takes over the world, I'll have to learn it 
+eventually, but since the UI for this project should be
+minimal, I'm not going to worry about it.
