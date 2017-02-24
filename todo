@@ -1,4 +1,9 @@
-[ ] figure out how to hook up postgres
+[ ] figure out how to make a docker container including all the pieces
+  [ ] postgres
+  [ ] initial schema and initial data
+  [ ] golang
+  [ ] ember and other js / css stuff
+  [ ] some way to pass in keys / credentials via environment
 [ ] write instructions for how to install
   [ ] getting the right version of dependencies
   [ ] building it
