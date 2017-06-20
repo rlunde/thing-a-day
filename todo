@@ -2,7 +2,7 @@
   [ ] postgres
   [ ] initial schema and initial data
   [ ] golang
-  [ ] ember and other js / css stuff
+  [ ] preact or vue? redux? and other js / css stuff
   [ ] some way to pass in keys / credentials via environment
 [ ] write instructions for how to install
   [ ] getting the right version of dependencies
@@ -24,7 +24,7 @@
     [ ] if no items cached within the time range (e.g. the last day) generate new ones
 [ ] add authorization and authentication (via API keys?)
   [ ] use JWT (https://jwt.io/)?
-  [ ] UI to set up an account (should use Oauth)
+  [ ] UI to set up an account (should use local accounts/passwords as well as Oauth)
   [ ] UI to manage API keys
 [ ] add UI to call all the data APIs
 [ ] set up a batch job to generate items for tags
