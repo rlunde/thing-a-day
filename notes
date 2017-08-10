@@ -68,3 +68,21 @@ That says:
   
   curl http://<dockermachineip>:3000/sys/info/ping
 
+The "docker-compose" line had the following error:
+--------------------
+ERROR: for thingaday_mongo_1  Cannot start service mongo: Mounts denied:
+The path /data/db
+is not shared from OS X and is not known to Docker.
+You can configure shared paths from Docker -> Preferences... -> File Sharing.
+See https://docs.docker.com/docker-for-mac/osxfs/#namespaces for more info.
+Creating thingaday_activemq_1 ... done
+
+ERROR: for mongo  Cannot start service mongo: Mounts denied:
+The path /data/db
+is not shared from OS X and is not known to Docker.
+You can configure shared paths from Docker -> Preferences... -> File Sharing.
+See https://docs.docker.com/docker-for-mac/osxfs/#namespaces for more info.
+.
+ERROR: Encountered errors while bringing up the project.
+----------------------
+
