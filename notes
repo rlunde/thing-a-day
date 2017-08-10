@@ -51,4 +51,20 @@ Basically, they expect you to put your build configuration somewhere else beside
 your github repository, which just seems silly to me. So I'm just moving everything
 to the top of my repo, at least for now.
 
+-----------
+I'm going to go crazy and try yeoman again, with:
+https://www.npmjs.com/package/generator-gorest
+
+That says:
+
+ mkdir $GOPATH/src/github.com/<user>/<appname>
+ cd $GOPATH/src/github.com/<user>/<appname>
+ yo gorest
+ go get .
+ (optional) go get github.com/tools/godep
+ (optional) godep save -r ./... 
+  docker build -t <appname> .
+  docker-compose up -d
+  
+  curl http://<dockermachineip>:3000/sys/info/ping
 
