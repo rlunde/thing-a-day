@@ -1,7 +1,0 @@
-# Golang uses environment variables to find where things are and determine where to put things
-# The environment variable that determines the location of the current workspace is GOPATH (although
-# it can have multiple directories, to help it find things under multiple workspaces, but that's
-# probably a little confusing to maintain).
-#
-# source this file, don't execute it
-export GOPATH=$(pwd)
