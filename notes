@@ -22,67 +22,12 @@ cached content, which should be fast and efficient.
 
 To get started:
 
-There's a "source-me" file two directories up that should set up GOPATH to
-include this directory. Run it like:
-
-source source-me 
+source source-me.sh
 
 (Assuming you use bash, of course.)
 
-I thought about getting this running on Heroku first, but it turned out that
-there was a LOT of things needed for that which won't be needed in general.
-
-I'm not planning on backing up and starting with this example, which uses Gorilla:
-https://github.com/sogko/slumber
-
-I need to back up all the way. I want to have:
-a) a working web site that people can use and enjoy
-b) a complete sample of code that people can use to make their own stuff
-c) something that doesn't tie people in to any particular company (e.g. heroku)
-
-I need to find the simplest thing that can work across hosting companies.
-
------------
-I started moving things around, but haven't fixed anything yet. It's absurd to
-imagine that under a directory named github.com/yourname/yourproject that you'd
-have a directory structure that starts with github.com/yourname/yourproject, even
-though the default go build configuration seems to expect that sort of thing.
-Basically, they expect you to put your build configuration somewhere else besides
-your github repository, which just seems silly to me. So I'm just moving everything
-to the top of my repo, at least for now.
-
------------
-I'm going to go crazy and try yeoman again, with:
-https://www.npmjs.com/package/generator-gorest
-
-That says:
-
- mkdir $GOPATH/src/github.com/<user>/<appname>
- cd $GOPATH/src/github.com/<user>/<appname>
- yo gorest
- go get .
- (optional) go get github.com/tools/godep
- (optional) godep save -r ./... 
-  docker build -t <appname> .
-  docker-compose up -d
-  
-  curl http://<dockermachineip>:3000/sys/info/ping
-
-The "docker-compose" line had the following error:
---------------------
-ERROR: for thingaday_mongo_1  Cannot start service mongo: Mounts denied:
-The path /data/db
-is not shared from OS X and is not known to Docker.
-You can configure shared paths from Docker -> Preferences... -> File Sharing.
-See https://docs.docker.com/docker-for-mac/osxfs/#namespaces for more info.
-Creating thingaday_activemq_1 ... done
-
-ERROR: for mongo  Cannot start service mongo: Mounts denied:
-The path /data/db
-is not shared from OS X and is not known to Docker.
-You can configure shared paths from Docker -> Preferences... -> File Sharing.
-See https://docs.docker.com/docker-for-mac/osxfs/#namespaces for more info.
-.
-ERROR: Encountered errors while bringing up the project.
-----------------------
+I've tried a Whole Bunch of things, most of which sound like simple
+boilerplate makers, that get a ways and then crash and burn. I'm
+starting over with a simple thing I make myself, and then I'll
+gradually make it more complete.
 

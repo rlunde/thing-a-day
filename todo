@@ -1,16 +1,10 @@
-[ ] figure out how to make a docker container including all the pieces
-  [ ] postgres
-  [ ] initial schema and initial data
-  [ ] golang
-  [ ] preact or vue? redux? and other js / css stuff
-  [ ] some way to pass in keys / credentials via environment
 [ ] write instructions for how to install
   [ ] getting the right version of dependencies
   [ ] building it
 [ ] write instructions for how to test
 [ ] write deployment instructions
 [ ] define a simple schema
-  [ ] decide on a default database (postgres?)
+  [ ] decide on a default database (postgres? mongo?)
 [ ] define the APIs
   [ ] add a category of items
     [ ] add an item
@@ -22,10 +16,7 @@
     [ ] say how many items from the category to choose
   [ ] get items from a category based on a tag
     [ ] if no items cached within the time range (e.g. the last day) generate new ones
-[ ] add authorization and authentication (via API keys?)
-  [ ] use JWT (https://jwt.io/)?
-  [ ] UI to set up an account (should use local accounts/passwords as well as Oauth)
-  [ ] UI to manage API keys
+[ ] add authorization and authentication (use sideauth project)
 [ ] add UI to call all the data APIs
 [ ] set up a batch job to generate items for tags
 [ ] should item contents be able to reference another item?
