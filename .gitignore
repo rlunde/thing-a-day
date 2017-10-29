@@ -28,6 +28,7 @@ _testmain.go
 roni
 gin-bin
 
+# add stuff here for react/redux/node stuff
 
 # ignore the binary file for now since it gets rebuilt all the time
 social
