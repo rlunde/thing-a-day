@@ -5,7 +5,7 @@ Try using JSON like:
 
 {"category-name":[
   {"id":"guid", "value":"some content"},
-  {"value":"some other content"}
+  {"id":"another-guid", "value":"some other content"}
 ]}
 
 If the id is set, an import should do an upsert, otherwise an insert.
@@ -33,3 +33,19 @@ gradually make it more complete.
 
 Oops. Forgot to work on the develop branch after I clobbered everything
 to switch over. 
+
+------------
+Thoughts on API use:
+
+1) Don't bother with auth -- initially, plan for this to be a microservice
+   that is deployed internally -- e.g. a web site will run this and call it
+2) APIs
+  POST /categories - create a new category
+  POST /templates - a template says what to fill in 
+  POST /items/category/{category}/ - add one or more items
+  GET /items/category/{category}/id/{id} - get a specific item 
+  PUT /items/category/{category}/id/{id} - update a specific item
+  GET /categories/{category}?count={n} - return N unique items from category
+  GET /categories - return a list of categories and stats about them (num items, etc.)
+
+  
