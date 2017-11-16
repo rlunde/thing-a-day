@@ -1,0 +1,11 @@
+{
+    "description": "The structure under categories is what might be used to import and export data",
+    "categories": [{
+        "name": "<string>",
+        "description": "<string>",
+        "values": [{
+            "item": "<uuid>",
+            "value": "<string>"
+        }]
+    }]
+}
