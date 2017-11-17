@@ -1,0 +1,12 @@
+{
+    "description": "The structure under templates is what might be used to import and export data",
+    "templates": [{
+        "name": "<string>",
+        "description": "<string>",
+        "values": [{
+            "id": "<uuid>",
+            "defaultDuration": "<seconds>",
+            "value": "<string>"
+        }]
+    }]
+}

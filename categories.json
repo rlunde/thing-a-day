@@ -5,6 +5,7 @@
         "description": "<string>",
         "values": [{
             "item": "<uuid>",
+            "rememberCount": "<int>",            
             "value": "<string>"
         }]
     }]

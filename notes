@@ -47,5 +47,21 @@ Thoughts on API use:
   PUT /items/category/{category}/id/{id} - update a specific item
   GET /categories/{category}?count={n} - return N unique items from category
   GET /categories - return a list of categories and stats about them (num items, etc.)
+  GET /templates/id/{id}/context/{context}/duration/{seconds}
 
-  
+Thoughts on flow:
+a) create a template that uses one or more instances from one or more categories, and that 
+   has a duration. 
+b) create values for the categories used by the template
+c) When you GET that template the first time, it fills in values in the 
+   template from the categories. The "context" string can be missing if you
+   always want new values, or if you want the same values returned for the
+   same context, you pass a context string and a duration (e.g. 86400, for the
+   number of seconds in a day). Once the time of the original request plus the
+   duration in seconds is less than the current time, it gets new values.
+d) it tries to avoid using the same values that have been used recently for
+   a category in a particular context, so a category has a "rememberCount" of
+   substitutions. For example, if you are substituting horoscope
+   "predictions" and you don't want to re-use one seen in the last 10 days,
+   and there are 12 predictions per template, you'd set rememberCount for
+   predictions to 120. (That assumes you have more than 120 predictions.)
