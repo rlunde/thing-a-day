@@ -1,0 +1,7 @@
+Sunday, November 26, 2017
+-------------------------
+
+Spent a little time defining what templates should look like. I need to
+a) make some test categories
+b) define error conditions (e.g. substitute a missing category)
+

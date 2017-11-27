@@ -3,9 +3,9 @@
     "categories": [{
         "name": "<string>",
         "description": "<string>",
+        "rememberCount": "<int>", 
         "values": [{
-            "item": "<uuid>",
-            "rememberCount": "<int>",            
+            "item": "<uuid>",          
             "value": "<string>"
         }]
     }]
