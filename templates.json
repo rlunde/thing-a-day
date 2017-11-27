@@ -5,7 +5,7 @@
         "description": "<string>",
         "values": [{
             "id": "<uuid>",
-            "defaultDuration": "<seconds>",
+            "duration": "<seconds>",
             "value": "<string>"
         }]
     }]
