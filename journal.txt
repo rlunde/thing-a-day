@@ -5,3 +5,28 @@ Spent a little time defining what templates should look like. I need to
 a) make some test categories
 b) define error conditions (e.g. substitute a missing category)
 
+====================================
+Saturday, December 16, 2017
+====================================
+
+Today's task is to simplify thing-a-day.
+
+I think templates could either take the form of JSON,
+where it's the callers job to then put the filled-in
+template into a web page, tweet, email, or whatever,
+or else it could be just text, in which case the 
+template might actually be the body of whatever is
+to be produced.
+
+I think for now the simplest thing I could do
+is make the template be just text (which could actually
+be in JSON format, aside from substitutions).
+
+Also, I can assume that I won't be running it as 
+a service for multiple people, but that instead everyone
+will run it themselves (or add auth themselves if they
+want to support multiple people themselves).
+
+So no auth required! That's such a huge
+simplification, I think I may actually get this
+done in the near future!

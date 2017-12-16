@@ -16,9 +16,10 @@
     [ ] say how many items from the category to choose
   [ ] get items from a category based on a tag
     [ ] if no items cached within the time range (e.g. the last day) generate new ones
-[ ] add authorization and authentication (use sideauth project)
 [ ] add UI to call all the data APIs
 [ ] set up a batch job to generate items for tags
 [ ] should item contents be able to reference another item?
   [ ] think about designing a DSL so item contents are templates that can be filled out
   [ ] refer to the same category:item (e.g. "fruit:1" might refer back to "apple")
+[ ] use humorscope rewrite ask a sample / test app for thing-a-day
+
