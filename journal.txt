@@ -30,3 +30,15 @@ want to support multiple people themselves).
 So no auth required! That's such a huge
 simplification, I think I may actually get this
 done in the near future!
+
+====================================
+Friday, March 9, 2017
+====================================
+
+Boy, those were famous last words, huh?
+
+I've been thinking about this project a lot over the
+past couple of days, but haven't actually worked on 
+it.
+
+More tomorrow!
