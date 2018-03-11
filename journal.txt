@@ -32,7 +32,7 @@ simplification, I think I may actually get this
 done in the near future!
 
 ====================================
-Friday, March 9, 2017
+Friday, March 9, 2018
 ====================================
 
 Boy, those were famous last words, huh?
@@ -41,4 +41,30 @@ I've been thinking about this project a lot over the
 past couple of days, but haven't actually worked on 
 it.
 
-More tomorrow!
+====================================
+Saturday, March 10, 2018
+====================================
+
+go has an amazingly complete template package 
+already: https://golang.org/pkg/text/template/
+
+unfortunately, I don't want users to have to
+learn anything that complicated, or get close
+to writing go code themselves, in order to
+use thing-a-day.
+
+A template should just be a string containing
+embedded formatting with special syntax for
+substitutions. Templates can refer to other
+templates. (Need to do loop detection)
+
+Aha! It turns out that someone has made a go library 
+for the mustache template language: https://github.com/cbroglie/mustache
+
+I should be able to use a subset of that, and map
+database elements (probably stored in a mongodb database)
+into it.
+
+I'll give that a shot. I'll play around with it
+a bit first to see how it works.
+

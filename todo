@@ -21,5 +21,5 @@
 [ ] should item contents be able to reference another item?
   [ ] think about designing a DSL so item contents are templates that can be filled out
   [ ] refer to the same category:item (e.g. "fruit:1" might refer back to "apple")
-[ ] use humorscope rewrite ask a sample / test app for thing-a-day
+[ ] use humorscope rewrite as a sample / test app for thing-a-day
 
