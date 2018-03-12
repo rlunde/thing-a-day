@@ -68,3 +68,54 @@ into it.
 I'll give that a shot. I'll play around with it
 a bit first to see how it works.
 
+
+====================================
+Sunday, March 11, 2018
+====================================
+
+Let's learn by doing! I need a specific example app.
+
+I'll replicate my creaky old Humorscope app, since I've been meaning
+to for about 17 years now, anyway. Better late than later?
+
+It looks something like this:
+
+1) a web page with different content every day
+2) an email (or mobile app text) with text specific to a user every day
+3) a dozen tweets per day, one per zodiac sign 
+
+The web page has a form something like this (if this was JSX instead of a template):
+
+let signs = [Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn, Aquarius, Pisces];
+let predictions = [];
+for (var s in signs) {
+    predictions.push(<Prediction user="default" day="today" key={s} />);
+}
+
+<humorscope>
+  <quote user="default" day="today" />
+  <horoscope>
+    <Predictions>{predictions}</Predictions>
+  </horoscope>
+</humorscope>
+
+If a prediction didn't already exist for a user, for a day, for a sign, it would
+pull one from the category and save it in the database with that composite key. Unless
+there is not enough data, it would not ever re-use an element of a category for the 
+same user and same day for two signs. It will try to not re-use an element of a category
+for the same user for at least N days, where N is configurable for a category. Even 
+then, it will try not to re-use an element of a category for the same sign for at least
+M days, where M is probably longer than N.
+
+For this example, it might be configured so that:
+  a) choose 12 unique predictions, one per sign
+  b) don't repeat any prediction for 14 days (assuming there are at least 14 * 12 predictions)
+  c) don't repeat any prediction for the same sign for 100 days
+
+Of course, now that I've written this down, I realize that plugging things into a template 
+is not the interesting part, it's randomly returning a batch of results that matches
+the constraints.
+
+That would make a super nifty example GraphQL service!
+
+Off to ponder that.
