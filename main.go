@@ -1,9 +1,11 @@
 package main
 
 import (
-	"github.com/gorilla/mux"
+	"fmt"
 	"log"
 	"net/http"
+
+	"github.com/gorilla/mux"
 )
 
 func main() {
@@ -28,4 +30,8 @@ func ping(w http.ResponseWriter, r *http.Request) {
 func indexPage(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Welcome to Thing-A-Day")
 	fmt.Println("Endpoint Hit: indexPage")
+}
+
+func randRecords(collection string, numRecords int) (records []string, err error) {
+	return nil, nil
 }
