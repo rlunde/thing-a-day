@@ -119,3 +119,73 @@ the constraints.
 That would make a super nifty example GraphQL service!
 
 Off to ponder that.
+
+
+====================================
+Saturday, March 24, 2018
+====================================
+
+I've been tinkering with humorscope for a bit, getting ready to use this
+thing-a-day project's REST API to populate it. I think I'm about ready.
+
+I think what I'll do first is create a schema and load some data manually,
+and get the consumer REST APIs working first.
+
+[ ] make a schema
+[ ] load some data
+[ ] make / test the REST API to retrieve data
+[ ] make a docker image
+[ ] test/debug/integrate with humorscope
+
+I'm starting by making a db called thing-a-day in my local mongodb, with
+collections predictions and quotes. In a hosted service, I'd need to make
+separate databases (I guess?) for each user, but I'm just making a 
+sample.
+
+> show collections
+predictions
+quotes
+> show dbs
+local        0.000GB
+sideauth     0.000GB
+thing-a-day  0.000GB
+
+Now to try to load the initial data for those. Switching to the humorscope 
+project for that.
+
+I got the predictions loaded, but now I realize I need a way to randomly
+pick them, which means I need to add a field that is just a counter (probably).
+
+I'm stopping for now to research randomly picking records from the database.
+
+Aha! Looks like there's a "sample" operator there already, so there's no
+need to add a new field. Hopefully.
+
+// Get one random document from the mycoll collection.
+db.mycoll.aggregate(
+   { $sample: { size: 1 } }
+)
+
+This worked!
+use thing-a-day
+db.predictions.aggregate({ $sample: {size: 10}})
+
+
+====================================
+Sunday, March 25, 2018
+====================================
+
+I need to load the quote data still. I think I'll try doing that with pymongo,
+since the form I have it in is not csv/tsv/json but it looks easily parseable.
+
+====================================
+Monday, March 26, 2018
+====================================
+
+I wrote a pymongo script to load the initial quotes for humorscope yesterday,
+so now it's time to start doing some TDD development on thing-a-day!
+
+First, I'll just make a stub function to return N records from a named collection
+of a default database. I'll figure out how to open the database once that is failing.
+
+Done!
