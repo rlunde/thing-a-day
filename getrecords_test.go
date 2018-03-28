@@ -7,10 +7,12 @@ import (
 func Test_randRecords(t *testing.T) {
 	type args struct {
 		collection string
+		fieldName  string
 		numRecords int
 	}
-	test1 := args{collection: "predictions", numRecords: 5}
-	gotRecords, err := randRecords(test1.collection, test1.numRecords)
+	StartSession()
+	test1 := args{collection: "predictions", fieldName: "prediction", numRecords: 5}
+	gotRecords, err := randRecords(test1.collection, test1.fieldName, test1.numRecords)
 	if err != nil {
 		t.Errorf("randRecords() unexpected error = %v", err)
 		return

@@ -9,6 +9,11 @@ import (
 )
 
 func main() {
+	err := StartSession()
+	defer EndSession()
+	if err != nil {
+		panic(err)
+	}
 	RunService() // see authapi.go
 }
 
@@ -30,8 +35,4 @@ func ping(w http.ResponseWriter, r *http.Request) {
 func indexPage(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Welcome to Thing-A-Day")
 	fmt.Println("Endpoint Hit: indexPage")
-}
-
-func randRecords(collection string, numRecords int) (records []string, err error) {
-	return nil, nil
 }
