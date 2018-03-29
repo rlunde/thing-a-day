@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 
 	"gopkg.in/mgo.v2"
@@ -50,9 +49,9 @@ func randRecords(collection string, fieldName string, numRecords int) (records [
 		log.Printf("error sampling %s: %s", collection, err.Error())
 	} else {
 		for _, r := range resp {
-			id := r["_id"].(bson.ObjectId)
+			//id := r["_id"].(bson.ObjectId)
 			field := r[fieldName].(string)
-			fmt.Printf("id: %s, %s: %s\n", id.Hex(), fieldName, field)
+			//fmt.Printf("id: %s, %s: %s\n", id.Hex(), fieldName, field)
 			rval = append(rval, field)
 		}
 	}
