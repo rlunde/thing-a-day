@@ -189,3 +189,11 @@ First, I'll just make a stub function to return N records from a named collectio
 of a default database. I'll figure out how to open the database once that is failing.
 
 Done!
+
+====================================
+Wednesday, March 28, 2018
+====================================
+
+Wrote a handler for getrecords and tested it with:
+http://localhost:8084/records/predictions/prediction/5
+
