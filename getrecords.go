@@ -34,7 +34,8 @@ func GetSession() *mgo.Session {
 	return thingSession
 }
 
-func randRecords(collection string, fieldName string, numRecords int) (records []string, err error) {
+//GetRandRecords -- get N randomly selected records from a collection
+func GetRandRecords(collection string, fieldName string, numRecords int) (records []string, err error) {
 	session := GetSession()
 	session.SetMode(mgo.Monotonic, true)
 
