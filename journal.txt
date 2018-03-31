@@ -197,3 +197,15 @@ Wednesday, March 28, 2018
 Wrote a handler for getrecords and tested it with:
 http://localhost:8084/records/predictions/prediction/5
 
+====================================
+Thursday, March 29, 2018
+====================================
+
+Moved the handler to its own file.
+
+====================================
+Friday, March 30, 2018
+====================================
+
+Getting started on a test for the GET handler.
+
