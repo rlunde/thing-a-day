@@ -209,3 +209,13 @@ Friday, March 30, 2018
 
 Getting started on a test for the GET handler.
 
+====================================
+Sunday, April 1, 2018
+====================================
+I started trying to Dockerize this. I made a Dockerfile,
+but I think it needs work to map the mongo ports and set 
+up a volume.
+
+Start here tomorrow:
+https://www.thachmai.info/2015/04/30/running-mongodb-container/
+
