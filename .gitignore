@@ -33,3 +33,5 @@ gin-bin
 # ignore the binary file for now since it gets rebuilt all the time
 debug
 thing-a-day
+db/source_me.sh
+db/data

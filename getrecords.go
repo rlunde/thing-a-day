@@ -16,7 +16,8 @@ func init() {
 //StartSession -- connect to mongo
 func StartSession() error {
 	var err error
-	thingSession, err = mgo.Dial("localhost")
+	//37017 (rather than 27017) is the port from the mongo container
+	thingSession, err = mgo.Dial("localhost:37017")
 	if err != nil {
 		log.Fatalf("mgo.Dial returned error %s", err)
 	}

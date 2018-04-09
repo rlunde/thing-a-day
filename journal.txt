@@ -219,3 +219,14 @@ up a volume.
 Start here tomorrow:
 https://www.thachmai.info/2015/04/30/running-mongodb-container/
 
+====================================
+Sunday, April 8, 2018
+====================================
+
+I added a db directory and scripts to dump/restore mongo,
+but I'm having trouble mapping the ports for reaching mongo
+on port 37017 from the thing-a-day container:
+
+docker: Error response from daemon: driver failed programming external connectivity on endpoint thing-a-day (3893c904314b8120f797f30d7795d6ca5a5351b9e5dbb47c1ff7c418c605cec6): Bind for 0.0.0.0:37017 failed: port is already allocated.
+
+Giving up for tonight.
