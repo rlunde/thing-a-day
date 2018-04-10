@@ -16,8 +16,8 @@ func init() {
 //StartSession -- connect to mongo
 func StartSession() error {
 	var err error
-	//37017 (rather than 27017) is the port from the mongo container
-	thingSession, err = mgo.Dial("localhost:37017")
+	//I got 172.17.0.2 by using "docker inspect tadmongo"
+	thingSession, err = mgo.Dial("localhost:27017")
 	if err != nil {
 		log.Fatalf("mgo.Dial returned error %s", err)
 	}
