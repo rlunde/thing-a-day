@@ -5,5 +5,4 @@ source source_me.sh
 ./dockermongorun.sh
 cd ..
 # todo: map mongo ports in Dockerfile for thing-a-day
-# docker mongo maps ports like: 37017:27017
-docker run -it -p 8084:8084 -p 37017:37017 --name thing-a-day --rm thing-a-day
+docker run -it -p 8084:8084 --name thing-a-day --rm thing-a-day

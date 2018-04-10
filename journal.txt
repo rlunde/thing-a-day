@@ -230,3 +230,15 @@ on port 37017 from the thing-a-day container:
 docker: Error response from daemon: driver failed programming external connectivity on endpoint thing-a-day (3893c904314b8120f797f30d7795d6ca5a5351b9e5dbb47c1ff7c418c605cec6): Bind for 0.0.0.0:37017 failed: port is already allocated.
 
 Giving up for tonight.
+
+====================================
+Monday, April 9, 2018
+====================================
+
+I did some docker reading in the middle of the night, so I have
+a networking trick to try. I hope it works!!
+
+Dang.
+2018/04/10 02:39:05 mgo.Dial returned error no reachable servers
+
+I tried a bunch of things. Giving up again (too late).
