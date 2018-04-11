@@ -17,7 +17,7 @@ func init() {
 func StartSession() error {
 	var err error
 	//I got 172.17.0.2 by using "docker inspect tadmongo"
-	thingSession, err = mgo.Dial("localhost:27017")
+	thingSession, err = mgo.Dial("localhost")
 	if err != nil {
 		log.Fatalf("mgo.Dial returned error %s", err)
 	}
