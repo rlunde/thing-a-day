@@ -242,3 +242,16 @@ Dang.
 2018/04/10 02:39:05 mgo.Dial returned error no reachable servers
 
 I tried a bunch of things. Giving up again (too late).
+
+====================================
+Tuesday, April 10, 2018
+====================================
+
+I've tried reading https://forums.docker.com/t/connect-to-mongo-in-docker/47275/6
+a few times. It appears to be written in pure gibberish, and Google translate is
+no help this time. I've tried a bunch of different things, with no luck.
+
+Nothing. I got nothing. Boy, this docker thing sure is simple. Hours spent, and
+nothing.
+
+Maybe tomorrow.
