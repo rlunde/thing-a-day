@@ -255,3 +255,41 @@ Nothing. I got nothing. Boy, this docker thing sure is simple. Hours spent, and
 nothing.
 
 Maybe tomorrow.
+
+====================================
+Wednesday, April 11, 2018
+====================================
+
+I had no trouble, initially, getting mongo running in docker and mapping the
+standard port inside the image to a port on the host, then interacting with
+it with scripts running on the host.
+
+I wonder if I can figure out how to get thing-a-day to connect to the mongo
+running on the host? Then I'll have two sides working against the host, and
+maybe it will occur to me how to get them to talk together.
+
+I finally figured out what the problem was, sort of. It turned out to be go,
+not docker, and not mongo. If I run mongo in the container like:
+
+docker run -d -p 37017:27017 --rm --name tadmongo -v $MONGO_DATA_PATH:/data/db mongo
+
+Then if I run ./service/thing-a-day directly (not in a container) it is able to
+connect to mongo fine on port 37017. Nothing I've tried has got me past network 
+issues when trying to run inside a container. I don't understand the info on 
+this completely, but this stuff in the go community seems to imply that people 
+are having the same trouble with kubernetes and other container infrastructure.
+
+https://github.com/go-mgo/mgo/issues/341
+
+Anyway, the networking stuff for docker is quite complicated, so I'm sure it's 
+somehow a factor, but I don't want to spend more days trying to figure it out. 
+I thought it would be cool to run my service in a container, but it's not cool
+enough to derail everything else I want to do.
+
+I suspect it's easy to call into a container with mapped ports, just hard to 
+call out, at least in some way that mongo's Dial interface wants to do. Who 
+knows?
+
+For now, I'm giving up on this part.
+
+

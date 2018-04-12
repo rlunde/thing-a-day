@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"time"
 
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
@@ -13,11 +14,19 @@ func init() {
 
 }
 
-//StartSession -- connect to mongo
+//StartSession -- connect to mongo running in a container:
+// docker run -d -p 37017:27017 --rm --name tadmongo -v $MONGO_DATA_PATH:/data/db mongo
 func StartSession() error {
 	var err error
-	//I got 172.17.0.2 by using "docker inspect tadmongo"
-	thingSession, err = mgo.Dial("localhost")
+	dialInfo := &mgo.DialInfo{
+		Addrs:     []string{"localhost:37017"},
+		Direct:    true,
+		Timeout:   10 * time.Second,
+		Service:   "localhost:37017",
+		PoolLimit: 0,
+	}
+	thingSession, err = mgo.DialWithInfo(dialInfo)
+	// thingSession, err = mgo.Dial("172.17.0.2:27017")
 	if err != nil {
 		log.Fatalf("mgo.Dial returned error %s", err)
 	}
