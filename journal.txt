@@ -292,4 +292,13 @@ knows?
 
 For now, I'm giving up on this part.
 
+====================================
+Thursday, April 12, 2018
+====================================
+
+I think when I get back to the Docker part of this, I'll see if I can put
+both mongo and thing-a-day into the same container using Docker compose. I know 
+most people say you should have each thing in its own container, but that would 
+have the advantage of being a single thing to download/deploy/run. We'll see.
+
 
