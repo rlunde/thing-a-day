@@ -14,15 +14,16 @@ func init() {
 
 }
 
-//StartSession -- connect to mongo running in a container:
+//StartSession -- connect to a mongo running on localhost
+// To connect to mongo running in a container:
 // docker run -d -p 37017:27017 --rm --name tadmongo -v $MONGO_DATA_PATH:/data/db mongo
 func StartSession() error {
 	var err error
 	dialInfo := &mgo.DialInfo{
-		Addrs:     []string{"localhost:37017"},
+		Addrs:     []string{"localhost:27017"},
 		Direct:    true,
 		Timeout:   10 * time.Second,
-		Service:   "localhost:37017",
+		Service:   "localhost:27017",
 		PoolLimit: 0,
 	}
 	thingSession, err = mgo.DialWithInfo(dialInfo)
