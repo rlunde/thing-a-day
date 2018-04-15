@@ -329,3 +329,29 @@ Maybe I need a specification template? Something like:
     }
   }
 }
+
+====================================
+Saturday, April 14, 2018
+====================================
+
+Actually, a simpler approach is just to make the date/time
+REST (or GraphQL) parameters, and just create a record like:
+
+key = user/template/collection/number/time
+value = set of elements of collection
+
+I'm going to try doing that for a first cut.
+
+That means the main problems to solve from the thing-a-day
+side are:
+  a) get a set of N items randomly selected with no duplicates
+  b) avoid picking any items that were recently used by the same 
+     user and same template. 
+
+Let's say there are 300 predictions, and 12 needed per day, then
+it would be reasonable to not have any repeats for 20 days at least.
+
+That's a hard enough problem to solve for a first phase.
+
+
+
