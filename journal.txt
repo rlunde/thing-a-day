@@ -353,5 +353,20 @@ it would be reasonable to not have any repeats for 20 days at least.
 
 That's a hard enough problem to solve for a first phase.
 
+====================================
+Monday, April 16, 2018
+====================================
 
+Let's break that down.
+
+1) Trim recently used list
+  a) if number of items remaining is less than N, remove oldest items from recently used
+  b) if items in recently used are older than D days, remove them anyway
+2) Get N items
+3) For each item, see if it has been recently used
+  a) put in keepers list if not
+  b) make sure it's not already in keepers list
+4) Continue to get M items (N minus number of keepers) until full
+5) Put N items in recently used list
+6) Return N items
 
