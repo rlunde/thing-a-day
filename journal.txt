@@ -370,3 +370,12 @@ Let's break that down.
 5) Put N items in recently used list
 6) Return N items
 
+====================================
+Wednesday, May 2, 2018
+====================================
+
+The big problem is what if we don't have enough items yet.
+
+a) don't have enough items to even get the N we want
+b) don't have enough items to get N that haven't been used in D days
+
