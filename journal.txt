@@ -379,3 +379,23 @@ The big problem is what if we don't have enough items yet.
 a) don't have enough items to even get the N we want
 b) don't have enough items to get N that haven't been used in D days
 
+====================================
+Saturday, May 12, 2018
+====================================
+
+I need to break things down to simpler steps in order to be 
+able to make any progress.
+
+1) make a REST API handler to get items from a collection
+2) get N unique items
+3) make sure N unique items haven't been used recently
+4) return the same N items for the whole day
+5) let different users get their own unique collection
+
+I will just apply the template on the caller's side.
+
+History table
+  user
+    collection
+      day
+         items (N)
