@@ -399,3 +399,18 @@ History table
     collection
       day
          items (N)
+
+====================================
+Tuesday, May 15, 2018
+====================================
+
+I currently have:
+router.HandleFunc("/records/{category}/{field}/{number}", handleGetRecords)
+
+I think I just need to add:
+router.HandleFunc("/records/{user}/{category}/{field}/{day}/{number}", handleGetUserDailyRecords)
+
+Later on I'm sure I'll want to have different timeframes than a day, but for now let's keep 
+it simple. I guess the easy way to represent a day is as yyyy-mm-dd. We'll let the server's 
+timezone choose the day, too, although again that might be something we can update in the 
+future. Maybe send a whole ISO 8601 timestamp?

@@ -25,6 +25,7 @@ func RunService() {
 	router.HandleFunc("/ping", ping)
 	router.HandleFunc("/", indexPage).Methods("GET")
 	router.HandleFunc("/records/{category}/{field}/{number}", handleGetRecords)
+	router.HandleFunc("/records/{user}/{category}/{field}/{day}/{number}", handleGetUserDailyRecords)
 	log.Fatal(http.ListenAndServe(":8084", router))
 
 }
