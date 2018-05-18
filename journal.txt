@@ -414,3 +414,9 @@ Later on I'm sure I'll want to have different timeframes than a day, but for now
 it simple. I guess the easy way to represent a day is as yyyy-mm-dd. We'll let the server's 
 timezone choose the day, too, although again that might be something we can update in the 
 future. Maybe send a whole ISO 8601 timestamp?
+
+====================================
+Thursday, May 17, 2018
+====================================
+
+Started implementing the GetUserDailyRecords function
