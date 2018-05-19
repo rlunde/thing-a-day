@@ -1,6 +1,9 @@
 package main
 
 import (
+	"errors"
+	"fmt"
+
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )
@@ -42,15 +45,28 @@ func GetRandRecordsForUser(collection, fieldname, user, day string, nr int) (rec
 	if minNeeded > want {
 		want = minNeeded
 	}
+	if want > r {
+		msg := fmt.Sprintf("Need at least %d records of type %s, but only have %d", want, fieldname, r)
+		err = errors.New(msg)
+		return
+	}
 	key := UserDailyRecordsKey{
 		Field: fieldname,
 		User:  user,
 	}
 	historyDays := c.Find(key)
 	numHistoryDays, err := historyDays.Count()
-	if (numHistoryDays * nr) > want {
+	if r-(numHistoryDays*nr) > want {
+		toDelete := ((r - want) / nr) + 1
 		// have to delete the oldest
 		// TODO: sort by age and delete (want / nr) + 1 days
+		// sorting: https://docs.mongodb.com/manual/reference/operator/aggregation/sort/
+		// date type: https://play.golang.org/p/A0n6DGBAqt
+		//            https://github.com/go-mgo/mgo/blob/v2-unstable/bson/encode.go#L43-L57
+		// it looks like if I just put a time.Time struct in the mgo key or value, it will be
+		// converted into a mongodb time. So maybe something like:
+		sortQuery := c.Find([]bson.M{{"$sort": bson.M{"date": 1}}})
+		// delete the earliest N records
 	}
 	// initialize random collection
 	// TODO: loop, getting random items, compare for uniqueness, and make sure they're not in history
