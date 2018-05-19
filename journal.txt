@@ -426,3 +426,9 @@ Friday, May 18, 2018
 ====================================
 
 Incremental progress on GetRandRecordsForUser function
+
+====================================
+Saturday, May 19, 2018
+====================================
+
+More progress on GetRandRecordsForUser function
