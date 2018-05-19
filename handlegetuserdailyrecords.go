@@ -21,14 +21,15 @@ func handleGetUserDailyRecords(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	//first, see if we already have the records
-	records, err := GetUserDailyRecords(collection, fieldname, user, day, nr)
+	records, err := GetUserDailyRecords(collection, fieldName, user, day)
 	if records == nil || err != nil {
-		records, err = GetRandRecords(collection, fieldName, nr)
+		//This gets messy. We don't want to return "recently used" records.
+		records, err = GetRandRecordsForUser(collection, fieldName, user, day, nr)
 		if err != nil {
 			w.WriteHeader(http.StatusNotFound)
 			return
 		}
-		SaveUserDailyRecords(collection, fieldname, user, day, records)
+		SaveUserDailyRecords(collection, fieldName, user, day, records)
 	}
 	j, jerr := json.Marshal(records)
 	if jerr != nil {
