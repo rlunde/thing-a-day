@@ -8,6 +8,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
+//router.HandleFunc("/records/{user}/{category}/{field}/{day}/{number}", handleGetUserDailyRecords)
 func handleGetUserDailyRecords(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	collection := vars["category"] // the collection of records
