@@ -67,6 +67,7 @@ func GetRandRecordsForUser(collection, fieldname, user, day string, nr int) (rec
 		// converted into a mongodb time. So maybe something like:
 		sortQuery := c.Find([]bson.M{{"$sort": bson.M{"date": 1}}})
 		// delete the earliest N records
+
 	}
 	// initialize random collection
 	// TODO: loop, getting random items, compare for uniqueness, and make sure they're not in history

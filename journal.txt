@@ -432,3 +432,18 @@ Saturday, May 19, 2018
 ====================================
 
 More progress on GetRandRecordsForUser function
+
+====================================
+Tuesday, May 22, 2018
+====================================
+
+Here's the supported mgo library:
+https://github.com/globalsign/mgo
+
+I'm having a hard time with this, primarily because it's been hard 
+to find any good examples of how to use mgo the way I want to. Documentation and
+decent examples are super hard to do in any case, so I'm not saying anything about
+the quality of mgo.
+
+I think the best thing I could do now is try to make another unit test.
+
