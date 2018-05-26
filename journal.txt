@@ -447,3 +447,14 @@ the quality of mgo.
 
 I think the best thing I could do now is try to make another unit test.
 
+====================================
+Friday, May 25, 2018
+====================================
+
+I'm traveling, so it's hard to get to this.
+
+To Do:
+  1) finish GetRandRecordsForUser
+  2) implement SaveUserDailyRecords
+  3) write unit tests for those two, and finish TestGUDRHandler
+  
