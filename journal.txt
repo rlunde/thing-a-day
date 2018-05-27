@@ -457,4 +457,45 @@ To Do:
   1) finish GetRandRecordsForUser
   2) implement SaveUserDailyRecords
   3) write unit tests for those two, and finish TestGUDRHandler
-  
+
+====================================
+Saturday, May 26, 2018
+====================================
+
+The main thing that (may) be relatively unique about this 
+project is choosing N random items from a database that are
+unique from each other and that haven't been used for as 
+long as possible (or for a while).
+
+Putting content into static pages via templates is something
+that every static site generator does. I was reading a Medium
+article about Gatsby recently that said there was something 
+like 5000 different static site generators out there, so I guess
+it's likely that some of them do the same thing. 
+
+I didn't actually "get" static site generators until recently,
+since nobody actually came right out and said why you'd want 
+one. It's for CDNs (content delivery networks), primarily. I 
+guess that must have been so obvious to everyone but me that 
+there was no point in saying it?
+
+That's not what thing-a-day is about. Thing-a-day could be used 
+by a dynamic site or a static site. It's just about letting you
+get the same N things during the same day for the same user.
+
+Same 12 horoscope "predictions" for example, in my reference
+implementation, plus the same "quote of the day". But you could
+have each person get their own unique prediction of the day, and
+have it stay the same until the next day.
+
+Anyway, back to GetRandomRecordsForUser. 
+
+Also, before I forget, my intention is to get all this working 
+with MongoDB, then factor out all the database specific stuff,
+and add support for one other database (perhaps Postgres) to make
+sure the "generic" wrapper and the database-specific implementations 
+work OK in both cases. This is such a small project that I'm not
+too worried about painting myself into a corner by doing it that 
+way, whereas I am worried that I'll overdesign it if I try to make
+everything completely database agnostic right from the start.
+

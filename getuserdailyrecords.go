@@ -15,7 +15,6 @@ func init() {
 type UserDailyRecordsKey struct {
 	Field string
 	User  string
-	Day   string // yyyy-mm-dd
 }
 
 /*GetUserDailyRecords -- get previously selected records from a collection for a user for a day
@@ -31,7 +30,6 @@ func GetUserDailyRecords(collection, fieldname, user, day string) (records []str
 	key := UserDailyRecordsKey{
 		Field: fieldname,
 		User:  user,
-		Day:   day,
 	}
 	query := c.Find(key)
 	result := &records
