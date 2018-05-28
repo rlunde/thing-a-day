@@ -499,3 +499,12 @@ too worried about painting myself into a corner by doing it that
 way, whereas I am worried that I'll overdesign it if I try to make
 everything completely database agnostic right from the start.
 
+====================================
+Sunday, May 27, 2018
+====================================
+
+Tonight I'm trying to revise getuserdailyrecords -- I realized 
+that it wasn't just going to return an array of strings, it was
+going to return an array (I hope) of bson structs containing 
+strings among other things.
+

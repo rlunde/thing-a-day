@@ -2,6 +2,7 @@ package main
 
 import (
 	"gopkg.in/mgo.v2"
+	"gopkg.in/mgo.v2/bson"
 )
 
 func init() {
@@ -12,7 +13,7 @@ func init() {
 //TODO: decide if we need to know the number of records here -- if we didn't have
 //the same number when we stored it as we want to return, it will overcomplicate
 //things...I think
-type UserDailyRecordsKey struct {
+type UserDailyRecords struct {
 	Field string
 	User  string
 }
@@ -27,13 +28,10 @@ func GetUserDailyRecords(collection, fieldname, user, day string) (records []str
 
 	db := session.DB("thing-a-day")
 	c := db.C(historyCollection)
-	key := UserDailyRecordsKey{
-		Field: fieldname,
-		User:  user,
-	}
-	query := c.Find(key)
-	result := &records
-	err = query.Limit(1).One(result)
 
+	query := c.Find([]bson.M{{"field": fieldname, "user": user}})
+	result := &bson.M{}
+	err = query.Limit(1).One(result)
+	//TODO: figure out how to get records from result
 	return records, err
 }
