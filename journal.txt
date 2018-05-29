@@ -508,3 +508,14 @@ that it wasn't just going to return an array of strings, it was
 going to return an array (I hope) of bson structs containing 
 strings among other things.
 
+====================================
+Monday, May 28, 2018
+====================================
+
+Having thought about it a bit more, I may refactor the database
+out of it sooner than I thought, given how much different mongo is
+than a relational database. In particular, in most other databases
+you have more keys and indexes, while in Mongo you have _id and that's 
+about it for "special" fields, and then you can just query across
+combinations of all the other document fields.
+
