@@ -519,3 +519,13 @@ you have more keys and indexes, while in Mongo you have _id and that's
 about it for "special" fields, and then you can just query across
 combinations of all the other document fields.
 
+====================================
+Wednesday, May 30, 2018
+====================================
+
+Just thinking things over today. I need the following:
+
+1) a table for each field of stuff, with user as a partial key
+2) a history table that says when each item was last used for each user
+3) a history table that gives the group of items for a user, for a day
+
