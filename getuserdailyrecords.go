@@ -9,15 +9,6 @@ func init() {
 
 }
 
-//UserDailyRecordsKey -- we store the data for a field/user/day using this key
-//TODO: decide if we need to know the number of records here -- if we didn't have
-//the same number when we stored it as we want to return, it will overcomplicate
-//things...I think
-type UserDailyRecords struct {
-	Field string
-	User  string
-}
-
 /*GetUserDailyRecords -- get previously selected records from a collection for a user for a day
  * see if the given user already has a set of records for this day, and return if so
  */

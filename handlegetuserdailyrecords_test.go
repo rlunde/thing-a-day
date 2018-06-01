@@ -22,7 +22,7 @@ func TestGUDRHandler(t *testing.T) {
 
 	req := httptest.NewRequest("GET", "http://localhost:8084/records/humorscope/predictions/prediction/2018-05-22/12", nil)
 	w := httptest.NewRecorder()
-	handleGetRecords(w, req)
+	handleGetUserDailyRecords(w, req)
 
 	resp := w.Result()
 
