@@ -42,3 +42,10 @@ func handleGetUserDailyRecords(w http.ResponseWriter, r *http.Request) {
 	}
 
 }
+
+//SaveUserDailyRecords -- save a batch of records in a cache so all the
+//calls for the same collection, field, user, and day return the cached
+//records.
+func SaveUserDailyRecords(collection, fieldName, user, day string, records []string) {
+
+}
