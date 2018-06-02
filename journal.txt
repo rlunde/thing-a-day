@@ -529,3 +529,25 @@ Just thinking things over today. I need the following:
 2) a history table that says when each item was last used for each user
 3) a history table that gives the group of items for a user, for a day
 
+====================================
+Thursday, May 31, 2018
+====================================
+
+I have an idea that I'll just stub things out, then run things in the
+debugger and get further and further along. Then when the happy path is
+finally working, I'll focus on some unit tests.
+
+Yes I know, I'm supposed to start with the tests. The problem with that is,
+that works great when it's all your code, but if half of it is library calls 
+you don't really know what the data actually looks like that is being returned,
+and it's just much faster to run under a debugger. Partly this is because nobody
+ever does good documentation, or you can't find it if it exists, and partly it's 
+because people change the code without changing the documentation.
+
+====================================
+Friday, June 1, 2018
+====================================
+
+OK, handleGetRecords is broken now, and I'm pretty sure I tested it before.
+
+I can't figure out what's wrong with it tonight.
