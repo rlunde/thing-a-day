@@ -16,16 +16,20 @@ func main() {
 	}
 	RunService() // see authapi.go
 }
-
-/*RunService runs the main service endpoints
- */
-func RunService() {
-	// TODO: everything
+func makeRouter() *mux.Router {
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/ping", ping)
 	router.HandleFunc("/", indexPage).Methods("GET")
 	router.HandleFunc("/records/{category}/{field}/{number}", handleGetRecords)
 	router.HandleFunc("/records/{user}/{category}/{field}/{day}/{number}", handleGetUserDailyRecords)
+	return router
+}
+
+/*RunService runs the main service endpoints
+ */
+func RunService() {
+	// TODO: everything
+	router := makeRouter()
 	log.Fatal(http.ListenAndServe(":8084", router))
 
 }
