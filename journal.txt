@@ -562,3 +562,30 @@ Saturday, June 2, 2018
 
 Got that unit test working. Given that it's returning random results, for now 
 I'm just checking that the result is a long-ish string.
+
+====================================
+Sunday, June 3, 2018
+====================================
+
+In order to test handlegetuserdailyrecords, I need to:
+
+1) keep track of when each record was last used
+2) keep track of daily selections for user
+3) get a set of N *unique* records that haven't been used recently
+
+I think I'll start with (3), since I need that in order to do
+the (2) and (1). Then circle back to (3) once I have data in the history
+tables.
+
+I should probably make a new table of limited size just to make it
+easier to test.
+
+How about a table of first names with around 10 records, and get 4 at a time?
+
+I'll make a function to insert new records and to delete records first, I guess.
+
+It took me a long time to find this:
+https://godoc.org/gopkg.in/mgo.v2/bson#ObjectId
+
+You can make your own object IDs in mongo, and call them "_id" but if you don't 
+already have a "natural" ID why re-invent the wheel?
