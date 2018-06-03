@@ -551,3 +551,14 @@ Friday, June 1, 2018
 OK, handleGetRecords is broken now, and I'm pretty sure I tested it before.
 
 I can't figure out what's wrong with it tonight.
+
+Ah. I read a whole bunch of articles of people having the same problems, and this
+looks like the best thing to start with: 
+https://stackoverflow.com/questions/38456093/unit-testing-app-engine-with-gorilla-mux
+
+====================================
+Saturday, June 2, 2018
+====================================
+
+Got that unit test working. Given that it's returning random results, for now 
+I'm just checking that the result is a long-ish string.
