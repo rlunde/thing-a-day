@@ -589,3 +589,9 @@ https://godoc.org/gopkg.in/mgo.v2/bson#ObjectId
 
 You can make your own object IDs in mongo, and call them "_id" but if you don't 
 already have a "natural" ID why re-invent the wheel?
+
+====================================
+Monday, June 4, 2018
+====================================
+
+Added a list of the top 20 male first names from the US social security administration.
