@@ -607,3 +607,11 @@ to see what else is out there that is like this, and figure out how to
 not re-invent the wheel, especially if there are already a million better
 wheels already out there. Need to find something interesting and different.
 
+====================================
+Wednesday, June 6, 2018
+====================================
+
+One cool open source project I see is http://www.generatedata.com/ -- it lets you generate 
+random data from predefined sources (names, etc.) It doesn't cache data for the current day,
+or let you import your own data (that I can see), however.
+
