@@ -615,3 +615,15 @@ One cool open source project I see is http://www.generatedata.com/ -- it lets yo
 random data from predefined sources (names, etc.) It doesn't cache data for the current day,
 or let you import your own data (that I can see), however.
 
+====================================
+Friday, June 8, 2018
+====================================
+
+I think I don't need to support a whole template replacement capability, but can still 
+make this more useful by allowing a vector of unique things, such as [firstName, lastName].
+
+So the results will look something like:
+
+[
+  {"field1": "value1", "field2":"value2"}
+]
