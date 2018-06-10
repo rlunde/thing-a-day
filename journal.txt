@@ -627,3 +627,41 @@ So the results will look something like:
 [
   {"field1": "value1", "field2":"value2"}
 ]
+
+====================================
+Saturday, June 9, 2018
+====================================
+
+Beginning tonight I want to:
+[x] load firstnames and lastnames into MongoDB
+[ ] update handlegetuserdailyrecords to get 8 firstnames 4 times with successive days
+[ ] update code to make sure all records are unique within a day
+[ ] keep track of when each record was last used
+[ ] keep track of the group of records used for a day and return it if called again
+[ ] once all records have been used, choose ones to re-use that have been used least recently
+
+To load the names, I started mongo in the docker container using dockerrun.sh, which maps
+the standard docker port 27017 to 37017. Then I ran the import.sh file from within the data
+directory.
+
+Then I verified that mongo had the content by:
+mongo --port 37017
+> show dbs
+admin        0.000GB
+config       0.000GB
+local        0.000GB
+thing-a-day  0.001GB
+> use thing-a-day
+switched to db thing-a-day
+> show collections
+names
+predictions
+quotes
+> db.names.count()
+50
+> db.names.find()
+{ "_id" : ObjectId("5b1c8764548c8912ba3972ea"), "firstname" : "John" }
+{ "_id" : ObjectId("5b1c8764548c8912ba3972eb"), "firstname" : "William" }
+...
+
+That's all I have time for tonight...
