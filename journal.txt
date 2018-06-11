@@ -665,3 +665,11 @@ quotes
 ...
 
 That's all I have time for tonight...
+
+====================================
+Sunday, June 10, 2018
+====================================
+
+Working on the new test, but I foolishly did the mac security update which used 
+up all the time I had.
+
