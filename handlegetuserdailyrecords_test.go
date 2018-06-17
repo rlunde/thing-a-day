@@ -5,6 +5,8 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
+
+	"github.com/go-test/deep"
 )
 
 type GUDRHandler struct {
@@ -37,6 +39,49 @@ func TestGUDRHandler(t *testing.T) {
 	if expected != string(actual) {
 		t.Errorf("Expected the message '%s'\n", expected)
 	}
+}
+
+func TestGUDRHandlerWithNamesBasicCache(t *testing.T) {
+	StartSession()
+	handler := &GUDRHandler{}
+	server := httptest.NewServer(handler)
+	defer server.Close()
+	r1 := "http://localhost:8084/records/test/names/firstname/2018-06-10/8"
+
+	//get it the first time
+	req1 := httptest.NewRequest("GET", r1, nil)
+	w1 := httptest.NewRecorder()
+	handleGetUserDailyRecords(w1, req1)
+
+	resp1 := w1.Result()
+
+	if resp1.StatusCode != 200 {
+		t.Fatalf("Received non-200 response: %d\n", resp1.StatusCode)
+	}
+
+	res1, err := ioutil.ReadAll(resp1.Body)
+	if err != nil {
+		t.Fatal(err)
+	}
+	//get it a second time and verify that it is identical
+	req2 := httptest.NewRequest("GET", r1, nil)
+	w2 := httptest.NewRecorder()
+	handleGetUserDailyRecords(w2, req2)
+
+	resp2 := w2.Result()
+
+	if resp2.StatusCode != 200 {
+		t.Fatalf("Received non-200 response: %d\n", resp2.StatusCode)
+	}
+
+	res2, err := ioutil.ReadAll(resp2.Body)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if diff := deep.Equal(res1, res2); diff != nil {
+		t.Error(diff)
+	}
+
 }
 
 //router.HandleFunc("/records/{user}/{category}/{field}/{day}/{number}", handleGetUserDailyRecords)
