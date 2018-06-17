@@ -677,3 +677,21 @@ up all the time I had.
 Wednesday, June 13, 2018
 ====================================
 Continue working on new test.
+
+====================================
+Saturday, June 16, 2018
+====================================
+
+I wrote a new test, but decided it was silly to continue running mongo 
+inside docker. But then I couldn't get mongodb to start locally, even after 
+using brew to uninstall and re-install it. In /usr/local/var/log/mongodb 
+I see a suspicious warning in mongo.log:
+
+2018-06-16T22:24:11.308-0400 F CONTROL  [initandlisten] ** IMPORTANT: UPGRADE PROBLEM: The data files need to be fully upgraded to version 3.4 before attempting an upgrade to 3.6; see http://dochub.mongodb.org/core/3.6-upgrade-fcv for more details.
+
+So that's great. I'll try uninstalling it again and see if I can manually nuke the storage.
+
+That worked. I'm using the brew version now. Then I had to restore / import the test 
+data again, but I have mongo working again. That's all I have time for today.
+
+
