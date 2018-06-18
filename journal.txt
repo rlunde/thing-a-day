@@ -694,4 +694,13 @@ So that's great. I'll try uninstalling it again and see if I can manually nuke t
 That worked. I'm using the brew version now. Then I had to restore / import the test 
 data again, but I have mongo working again. That's all I have time for today.
 
+====================================
+Sunday, June 17, 2018
+====================================
+I made it a little farther. Since I haven't put any records into the
+daily user records table yet, I can't get them back out. The problem is,
+I'm finding bson *very* confusing, since I haven't found any good examples
+that use it.
 
+I think my next test (to do before finishing handlegetuserdailyrecords_test) is just to 
+write a record to the history collection and then read it back out.
