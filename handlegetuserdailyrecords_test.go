@@ -118,3 +118,8 @@ func TestGUDRHandlerWithNames(t *testing.T) {
 	}
 
 }
+
+func TestWriteAHistoryRecord(t *testing.T) {
+	StartSession()
+	t.Errorf("not implemented yet")
+}
